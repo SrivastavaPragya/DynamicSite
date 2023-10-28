@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"><link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    {{>navbar data=details}}
+  {{>slider slides=slides}}
+
+
+
+  {{!-- banner1 section --}}
+
+<section class="banner1_section background1 py-5">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>start learning new Technology</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate possimus ipsum, facere itaque quo non explicabo atque molestias exercitationem maiores tenetur corrupti eaque. Vel suscipit dolores enim provident sunt dolor voluptas consequatur ea hic?</p>
+      <button class="btn-btn-outline-primary">START LEARNING</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+  
+  {{!-- banner1 section --}}
+  
+  
+  {{!-- service section --}}
+  <div class="container">
+    <section id="services_section" class="py-3">
+    <h1 class="text-center text-secondary"> SERVICES WE PROVIDE</h1>
+    <div class="row mt-5">
+       {{!-- first service column --}}
+{{#each services}}
+     <div class="col-md-4">
+
+      <div class="card">
+        <div class="card-body">
+      <div class="container text-center py-3">
+        <i class="{{this.icon}} service_icon" ></i>
+      </div>
+          <h5 class="card-title">{{this.title}}</h5>
+          <p>{{this.description}}</p>
+          <a href="{{this.linkText}}">{{this.link}}</a>
+          <a href="" class="ml-5">support</a>
+        </div>
+      </div>
+
+     </div>
+     
+
+
+{{/each}}
+     
+
+
+
+
+
+     
+
+    </div>
+
+  </section>
+    
+  </div>
+
+ 
+  {{!-- banner 2section --}}
+  
+
+<section class="banner_2section py-5">
+  <div class="container text-center">
+    <div class="row">
+      {{!-- left side --}}
+      <div class="md-col-6 ">
+<h3>we work for people ,not for money</h3>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam unde, minima debitis cumque consectetur praesentium voluptates repellendus! Eveniet fuga voluptatem vel ea ex quasi at cum, quo sequi harum sint aspernatur praesentium? Optio, maiores.</p>
+<button class="btn btn-primary">Click here</button>
+
+      </div>
+      {{!-- right side --}}
+       <div class="md-col-6">
+        <img src="/static/images/banner1.jpg"   style="height:250px;" alt="image">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  {{!-- banner2 section --}}
+  
+
+
+  {{!-- contact section --}}
+  <section id="contact_us_section " class="py-5  background1">
+<div class="container">
+  <h3 class="text-center text-secondary">CONTATC US</h3>
+  <div class="row">
+    <div class="col-md-12">
+      <form action="/process-contact-form"  method="post">
+  <div class="form-group py-3">
+    <label for="exampleInputEmail1"> Your Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div>
+
+
+  <div class="form-group py-3">
+    <label for="contactNumberField" class="form-label">Your contact Number</label>
+    <input  name ="phone" type="number" class="form-control" id="exampleInputPassword1" placeholder="phn No">
+  </div>
+
+<div class="form-outline py-4">
+  
+  <label class="form-label" for="textAreaExample">Message</label>
+  
+  <textarea   name="query" class="form-control " id="textAreaExample1" rows="4" placeholder="enter your query"></textarea>
+
+  
+</div>
+
+  <div class="container text-center py-5">
+    
+  <button type="submit" class="btn btn-dark">Submit</button>
+  </div>
+
+
+</form>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  {{!-- about section --}}
+  
+   
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
